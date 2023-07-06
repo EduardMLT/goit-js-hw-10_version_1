@@ -46,7 +46,7 @@ function onSelectBreed(event) {
         loader.classList.replace('loader', 'is-hidden');
         selector.classList.remove('is-hidden');
         const { url, breeds } = data[0];
-        
+        console.log("data[0]", data[0]);
         divCatInfo.innerHTML = `<div class="box-img"><img src="${url}" alt="${breeds[0].name}" width="400"/></div><div class="box"><h1>${breeds[0].name}</h1><p>${breeds[0].description}</p><p><b>Temperament:</b> ${breeds[0].temperament}</p></div>`
         divCatInfo.classList.remove('is-hidden');
     })
