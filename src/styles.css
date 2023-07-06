@@ -139,7 +139,7 @@ h1 {
   content: "";
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 50%;
   background: #FFF;
   border: 18px solid #de3500;
   border-radius: 100%;
