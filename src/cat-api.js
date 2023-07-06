@@ -1,4 +1,4 @@
-const url = 'https://api.thecatapi.com/v1/cat';
+const url = 'https://api.thecatapi.com/v1';
 // ключ з сайту
 
 const api_key = "live_QWpcFK8RDQNixTwCH3rDYVV7QVkC4CMtlgILvCFvVqu3G5nagZEgozDLY8826ZG3";

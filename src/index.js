@@ -10,13 +10,16 @@ const ref = {
     loader: document.querySelector('.loader'),
     error: document.querySelector('.error'),
 };
+
 const { selector, divCatInfo, loader, error } = ref;
+console.log("ref ", ref);
 
 loader.classList.replace('loader', 'is-hidden');
 error.classList.add('is-hidden');
 divCatInfo.classList.add('is-hidden');
 
 let arrBreedsId = [];
+
 fetchBreeds()
 .then(data => {
     data.forEach(element => {
@@ -26,8 +29,9 @@ fetchBreeds()
         select: selector,
         data: arrBreedsId
     });
-    })
-.catch(onFetchError);
+})
+    .catch(onFetchError);
+
 
 selector.addEventListener('change', onSelectBreed);
 

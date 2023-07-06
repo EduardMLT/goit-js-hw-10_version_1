@@ -123,7 +123,9 @@ h1 {
     }
 } */
 
-.loader {
+
+/* ін & ян */
+/* .loader {
   width: 96px;
   box-sizing: content-box;
   height: 48px;
@@ -134,7 +136,11 @@ h1 {
   border-radius: 100%;
   position: relative;
   animation: 3s yinYang linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .loader:before {
   content: "";
   position: absolute;
@@ -147,6 +153,7 @@ h1 {
   height: 12px;
   box-sizing: content-box;
 }
+
 .loader:after {
   content: "";
   position: absolute;
@@ -159,8 +166,47 @@ h1 {
   height: 12px;
   box-sizing: content-box;
 }
+
 @keyframes yinYang {
   100%{transform: rotate(360deg)}
+} */
+
+/* спінер */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loader--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid #ffd700;
+  border-top-color: #0057b8;
+  border-radius: 50%;
+  animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
 }
 
 .cat-info {
